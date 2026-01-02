@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Talha Malik– Portfolio</title>
+  <meta name="description"
+    content="Priyal Malviya – Creative Web Designer & Frontend Developer. Animated, responsive portfolio with projects, skills, and contact." />
+  <meta name="keywords" content="Priyal Malviya, portfolio, web designer, frontend developer, HTML, CSS, JavaScript" />
+
+  <!-- Favicon (optional) -->
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="./images/logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+</head>
+
+<body>
+  <!-- Header / Navbar -->
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home">
+        <div class="logo"><img src="./images/logo.png" alt="logo"></div>
+        <strong>Talha Malik</strong>
+      </a>
+      <nav class="navlinks" id="navlinks">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+        <button id="themeToggle" aria-label="Toggle theme"><img src="./images/icons8-night-mode-24.png" alt=""></button>
+      </nav>
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero container" id="home">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow reveal"><span class="glow-dot"></span> Available for freelance projects</div>
+        <h1 class="reveal" style="transition-delay:.06s">Hi, I'm Talha Malik —
+          <span
+            style="background:linear-gradient(135deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent">Web
+            Designer</span>
+          & Developer
+        </h1>
+        <p class="lead reveal" style="transition-delay:.12s">Building fast, clean, and user-friendly web experiences
+          that grow your business.</p>
+        <div class="cta reveal" style="transition-delay:.18s dis">
+          <a class="btn-primary" href="#projects">See Projects</a>
+          <a class="btn" href="#contact">Contact Me</a>
+        </div>
+      </div>
+      <div class="avatar-card reveal" style="transition-delay:.2s">
+        <img class="avatar"
+          src="https://images.unsplash.com/photo-1605379399642-870262d3d051?q=80&w=1206&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Talha Malik placeholder" />
+        <div class="rings" aria-hidden="true"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="container" id="about">
+    <h2 class="section-title reveal">About Me</h2>
+    <p class="section-sub reveal" style="max-width:800px">Hi, I’m Talha Malik— a Computer science Student. I
+      create clean and responsive web interfaces, focusing on user-friendly design and smooth interactions. I enjoy
+      turning ideas into simple, functional websites. I am constantly learning new skills to improve my development and
+      design
+      abilities and deliver better experiences for users.</p>
+    <div class="about">
+      <div class="card reveal">
+        <h3>What I do</h3>
+        <ul>
+          <li>Modern, responsive websites</li>
+          <li>Clean UI with smooth interactions</li>
+          <li>Landing pages that attract users</li>
+          <li>Designing simple and functional interfaces</li>
+        </ul>
+      </div>
+      <div class="card reveal" style="transition-delay:.06s">
+        <h3>Highlights</h3>
+        <ul>
+          <li>Building projects to strengthen development skills</li>
+          <li>Focus on clean, pixel-perfect designs</li>
+          <li>Passionate about learning and improving constantly</li>
+          <li>Turning ideas into functional, visually appealing web page</li>
+
+        </ul>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Skills -->
+  <section class="container" id="skills">
+    <h2 class="section-title reveal">Skills</h2>
+    <p class="section-sub reveal">Hover to preview • Auto‑animated on scroll</p>
+    <div class="skills">
+      <div class="skill reveal"> <img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAADtklEQVR4nO3ZW2xMQRgH8L+oJogHxAPxghc8iMsDbyWoiHQ7s7UlrkFtUQ0pIUKIS0IqEtdQQVwiLhFEJG4JD3WL4EG0IajbnnO2u92DaovSjmxX9HycadeZYRPZL5lkk8k5Z357vpn5dhZIRzrS8f+GwVFncohUNoPho3cAw4uUAzieqwDupBpgctz2DDA5zqsOQBT/eWuYR+5xTgWwPxWAujnkHmWeAQbHxlQAameRSbxBBVCcCsD7GQSw2DPAYshPBcCe1nq9xRHwDsjFaNnArBndhW3b7bakYtNAAohOdTyLIcszwGQYJP12J2cIOxbTA1jViwCqA44U8mOgZ0CIoWdb6WFbIXVAc7MQSzIIwMprfcabAHp4Bgigg8HQKAPEqirVAfU2GXxzEZnAjfExQCVMDkMKqLhLBmsV9lOexN8WkvwPKQ2+BcDwUAq4f5UCSoYrAxoLCeCBDsBlGaCm/AwBhNeOUwZ8mk9S6JIywGA4IgVcOUQA1aX5yoD6uQ4Ax2EdgK0yQPT8dvVJfGM7AXycTQClygCTY7kUcGKDOuDSegL4MNPxDD+W6QDMkgEih5arA86WEMC76QQwUxlg+DFBCtgdVAccn0sANY4ywmDIVgaE8jDMSxEnncT3jlHAAT/pj+S3XhvKxVBlwGsf+mgFPL5IAbvGkv6wo4yIcPRWBogsZBgMTW6Dq16dRdIlevNc+4CqWxRQOoL0O1agZhFEJ+gIk6PGDRBeMoQAah6Vtw8IV1LA+gE/+5oWkWuj0BUGR6UbwJrXlwBioZcivC5bWIHM3wFLM4XYN0mIhnfSUvrrAvIGKnQCbrjm+NQuritP7G2ViF7YJcJrxgixJ1uIOwcTVadbLO30E/A5SFag6zoBp2ST1I5Y3pfRL3UkvRoKSCF3UhvAZNgp3Y3PbmtJnT8GxFOpfK/8OIVhh07AmjaXy7yOIrxilIic3ixir57KAfE0undUiLKcxJwo/uU4xVEHmQyrtQEMhvlJr/0OjP3qiRD1sTYHLWTHKRwFOgG5njayyRm//d5N9jglxOHTBghzjNK2E8t+Si6CiDhOIywfRuoD+NH/bwAaCxP1f3SKyx6Tg37aANZ4dNUBaCqC+FSQKJmdNY/ptkmOR1fojJa3wBA0OE4bHLXJAr4EE4e1UUeV6doYGkyGawbHStOHwfib8SaAziE/xpkMW0yO+17fjpH4B6gsfv4Z9aEbUhVJv51/+S2rvB2TYeKP3ftZS4t/ZpgY7/N843SkIx3/Z3wHrTGmPWk4PzUAAAAASUVORK5CYII="
+          alt="html-5--v1"> <strong>HTML</strong>
+        <div class="bar" data-level="95"></div>
+      </div>
+      <div class="skill reveal" style="transition-delay:.04s"> <img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEEElEQVR4nO3YSUwUQRQA0J5qF4zx4JK4HEz04HrRg3G5aIxr4nJRb+pFOelBYaoaVDSgkcUVN0Qxbgfxoh5QYKp6RBQXkIjKMuAoiAziMKCCKCiU6THQXTgtM12lk5j5SSVkuqu7Hr+2LkmKRCQi8f8GQKQdIELDWiBusw6AxB12AMKvODKAH4YdAEmRZYAN4pu8DZDPNYRejlb21bchcsM6AOHMsAAOvdABEJ/lyUBSOAAgucyQAZxoGQAQ2R4WwIGnhjGAt1kHQLIhLIDEx3p9hay3DJCQY5FZw6alPqAtLS0DlmBizOVGFpHwoO89kl1daB0A86ebAcYm3hMC6KGUDjnfLwO7C3VAnHOadYDiGG0GGBKnUp+PH/Cxs/v3LhTn1AE7ckdZB0jUBhDuMkO88Xi5AbVtP1jA2XrDO3CX1gYOgH8mahA5iKdmNzGAMl8Xe8/pN4YZiLzjarwfAEmpSMD8W14GUODpZLvPCbex/lNugA3hXJGAVbk+BnCr9it7zzGXYRUmd/gBEF8SCdjsZMfFpeov7D2Hyw2rMLkoIgNpwTY21eEKeRAff9HOAlKeGzKAU7kBAJLYYAEJOZUhAxJLP7Nj4GCpcRaK4QcgsilYwM6bL0MGxD76xAKSivVn2slGboAM1eXBAqKvPw8ZsKWglQXse6iPH4Us4wZIyDFb5CC+WtPBANY5fOw9e+731ZVinbP4Afb8CSIBOW+/MoClOc1sBuLv6oD4gvH8gL3OQQCS7kCNm5nG7kgLqxoGBBS972QAc2580K9nvqNAUXsHcI8UXTKYH/BrJmoOBJh4oJABlLgbBwRUtH5nAFOym/TrGXXGGcgrpPF+ACIVgQAj995lALWNXro8s5hGxeu7yd7GDcvy0NW5Ptra2c0Axl3RvwXAqdf68yEpFwawQeIMBBhssqV+7fHSkwWv6OIzT+iK2830gusLbfnGNrw3orI8egbSq42rsCoOgHC22SCtb2q2vJ1u/97DdrEjhuMUSK6JA0CcbgY4olb/8bvALLSulFHRbxuRZjhOQfi4MABAZPefpkqtKy048Zgm57uoq77JFKB1oys1HXRtns8/JuT+X2IpzwxjAO8SB4Bka7DzvhFTVf+B+gZotGx2nILwFmEAGalrrSxi2nfz0CyLxyl2skYYQILOeaJWYtNypo7dRijqXHEAxTFZOEBbdU+6qZxS9uscSGHrSTF5k8QBYvKGCwFk1FH5aBUF+4spMCx2IEDR3ikJDS0Lihptg+Q6QPhz0Ij0GgqSn1E5Qe8egQvusEHiAApGUhyeIf3V2FE0TFYcS2yQJAOIS6xmB0Di1o7P/eef9vsjpLBF0Nn5l/9lnuxAvNK/ekNcoxXtb+037Zrl50YiEpH4P+Mn9Q+e3CSBSHQAAAAASUVORK5CYII="
+          alt="css3"><strong>CSS</strong>
+        <div class="bar" data-level="92"></div>
+      </div>
+      <div class="skill reveal" style="transition-delay:.08s"> <img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACHElEQVR4nO2WT0hUURTGz3HUGUSEUNL8FxYmQgWF4UJRRDAQlRYuoqyViButdiUi7WoT0sZoIVorCcHMSKQ0cSEKKZX2oGhhhbQRDZRAxL6483jebjNKEr65A+eDj4Fz7rw5v3nnnXeIRCKRyErBIdhkEgBHACAA+1GsC4YAOLEvGgLg2GMSAEcAIAD7UawLhgA4//uDvOMn3WZuYZhwsZaRlcFIDDCyDzOa6hmLz+IAYLyPEArqHP3hlBCH89YCbC8SCnJ1PJjMKD7mfnqx0tOMXx8sBXg7pOMJCYz3T934l3HC8TzGtSuM9TcW34HJRzqu2mjznT7/cz4OHuKvE2b8QjVj6dW/Xs8CAOXz5eaDGwoymhsZn0bjBGB5knCmOHICBQIuyMac5QDKqsiOFkZqSiTIqROM1RnLATyvTBPu3CBkppsQbZc5tgBq3u8F8Pec/zFL4fnvnc/L8hFATZGGKsbzBzr2ecwEGOnRucd3CSUnI+d99039neQknwAG7lH49e9Nk+tXGT1dhLKzZkuo3UedV/uPF6sqZXybcONrs4TKczqn3ta+AHx8oQF2c+FRvRrc7zDvDDMjJ9NcJZRvtfjYQq/7CWmp0YtXrfCy1+z9zta9gStKoo/SAwNQ/j5FaG9i5B9x57lakxtrGHOD0c/PDBAu1TGKCtx//1CaW/jD24Sthd2m2gEC+GESAEcA4CuASCQSkR/6DRH0JVWM43R/AAAAAElFTkSuQmCC"
+          alt="javascript--v1"><strong>JavaScript</strong>
+        <div class="bar" data-level="88"></div>
+      </div>
+      <div class="skill reveal" style="transition-delay:.12s"> <img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAADb0lEQVR4nMVV24tVZRQ/ZZHQjV4MH7pQEkVQTQaFBV4ISrzM7LXOprKoQDCl0kLqLf0DRJFuRPlSj/OgPkR55VvrHO02I2Qk1py91jdDl7FxNCN6sjzx2/uccWafGc8IQR98sPda61vX3/f7KpX/Y21tNq/kkD1DwTawxJ6Z7LjmD5P4pqRm1bS/OWfWAVh9O6kPkNgHrBZZ/SCFeHdbj28WUxb/kcXeJvFBVts5K+fP7R+9ltV+Tw/ajfhfNzh4dRL8VRIfI/WnquIpvlnj+nbWydFsHomdfSHEud2zrzfuJfHjZXka4gMs/hucJ3W/v6wnsR/6anZX1wBpPVuIkjsdxKUs9iup/UzBHu/U+3Ek0TVAosPzSW10yuHDfhuL/cIhLmFtLEKgvsNDd5YCjK06ZDd3DVBpNq8g9XNcs5VV9ZdIfAerZ5ChsnxDD5n4DhJfxxKXk/qfODuj38UhXIUBsvoBUvsbPWX19wunth9t4ZA9hI1vyFjsGJAGW5xhtc8TiUkHZNOaL2b1IVILQAqrvcxqu6k+cgerjfeGeDvsnv1q6AbsibapjcOG1PtZfCOJrSH1OomdoFr2aNFz8dV5fyUunwxVUj/NYvtIfEvuUP2NvLKius2QsfpbyBq2afj+uovzsFWYU6K2ogLnSYiPlFtG4h9hcKuPnLweWRct8CY2viErErFRFt9VPp+DQf0nOBrBle8IoPYhcD9dAFY/Dxl0+d1Q+7gzwbiU1YYraA2LGeYwQ4u2tsre3Apynmv2eqvKLSz+KWaxpj5y00T2klER2J+YOmSxvegbqa1lsT3AOomdaQ8ZGWOXh8xqn5D4myBIFj8yZcjt9eRnQ9dUxZ9ntS9Z7AKpf0di20j8a0A30WwZbnl+0wHZYrgDLP5Oy/YfEj8EqIO/LknVJP4HKDjR+Bqpv0fqDcgmLprYWRLzQmevtNr8F5KsdFu92rgFyJosS+t2a85BOR/FHlY/1Sfxnqmo8SwNjQVdAwBRrP5NWZ5iTiA7oE69t6wn8aNpsMdmEcDum56uGwuKKuwMbDrOiX07HY13LKAEZNaGXdrfnEMaXwTs8MhUa/Hp8oMDWwSefJsvXYXaztZA38WzSGpfJDr8YFuP/oNzAO0WigbwdM7KORaQBFbEUzkdjUwkgnmB5NT4sh79/3L9C5vY4hdQRdQeAAAAAElFTkSuQmCC"
+          alt="external-react-a-javascript-library-for-building-user-interfaces-logo-color-tal-revivo"><strong>
+          React.js</strong>
+        <div class="bar" data-level="79"></div>
+      </div>
+      <div class="skill reveal" style="transition-delay:.16s"><img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACsklEQVR4nO2W0YqbQBSG8xBNGu9LMXvRVyhoF2I2FlrMA/RipzGwKO1VUSgb80QFXVYLfQKTvETS26jRS08Zs2nDEo0OM9ZAfjhXifB/Z/45c1qtiy76P/p9/bKzkrjZWuouVgNuux5wkFegi/mlCVvQhDnoggVfrzv1mL/pjlYSFxaZLg2gH8KIIeiCwt78gEvLmq8EoGeVMoN4ik3pzhMCAOhCAHf9NnWALPMVzZMBiPhuTKkDrKXuskaAOXWA1YCL6gMQQ/oABPknBtCFgDoAnvnnHSGJs+o7AfH+fMeoJmzgy9sXLRZa97sK84dMe/eRiflnEAF1AE3YMDd/ANFeDbjpWur6p8brCeMRaKKPM88sNsf0/QN0DBlmpgwLU4atKQPk1eF3bx6jDm/HM95JFrwdb3eVzHk7tvBvtZg33sPIHEJYZPoYwNVDMuo5cdhzEjhecXjlxAp78zKkZc3vATLzdpzmm092ZccpMwgcmyqd3xeORnHnk+cQwSsnpL+NPmUeqhbOfGnzzt840d9GDRmWZADJsioAbyf0VwljCBHhCUQEJxBSByDJP65K+Xf+3QP6ALuZX/0EnGTRiAiZMliEEbIITuD+jMdosnn9I2SzVpg3oBA9ZE6slH3I+IeY7UKHIQwZgioABxBBUed51ub3+taHtjGEqSmDf2q8Hn6HX1j8SPXsxMfjNRuxduLjzDOLzTGNH8cd5E1myFMXyFO3yJtAXrWaJuSqI+ROwiLTjQVAO/NpWfONAhjj2FTofOMAUJb5auYbBXDrqcvzBnDV6KwBEEH+bz2V/lZJqt3MrwjgTuhvlaS6dVWLIEL0t8oax+gG/UL1rQdl9PnnRCn1kOH/uGo9ixkJBL6chZ1vqvm9Pjl3beSqU+SqPh6v2Yh1VR9nvnGxueiiVq7+AFwg/qWc6gzXAAAAAElFTkSuQmCC"
+          alt="figma--v1"><strong>Figma</strong>
+        <div class="bar" data-level="70"></div>
+      </div>
+      <div class="skill reveal" style="transition-delay:.24s"><img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAD/0lEQVR4nO2Y3WtcRRiHV+g/IKg9s9pcWJVeCt4VEdS01ptetje9akVNztkoggW/GlExMUKhUkigBQPFgFUsTYooSC1VaSghwS+K0aqtSUy2aXaTTfYjOzNPmXN2sysmu2d2YzbFfeHH3rzM+T3vvO/sOROJNKMZzfh/RGeELW0t3LkR6oywZd2Me1H2ew5jrkB5AjZCrnmWw1j7VvbVZ15weKNMe2tpKy/XZL7jXh70BLLRAK4g334fD9RS/Vcbbd4rQbxiDeAK+jYRQF8tO9DfaONeSf32O+AwsAmM48vhI3sAwScNNy5WdNoawBMMhVm8exf/DA3aSIGSoPKQz0D8D82lAU3P0zXMgMOg/Q44jNoCFI1rWTIvlzUyFyif1SwvaYa6LQEEI5b2ucN1SIQFKK/4lx8UdEzzxTHNV72a0UFNel6Tz2iW0wHEyWesZmDOeLJpnx1hF/cBCuZlbu281x6GqSuB+dyiZvxbbbcLUR4KD+DwXGiA1rJez1Y2dfIQvvlsSrM4q4lFrebgeZsdGLYCMH2+HLRIpdyuJyG7oMkuKOauK9s5uBTKfEyw22bhrlZKA5quDNDvarLzikxSMXLGroU8oyitlc3fzXbPYcIWwJg31TftsVZez1MQ/zUwn4or3n7M0rzw2+ivtnu4f7WW2eE6HPEESdtFTVsUTxcD8FkngY7A2XfgwgnNla8D45mEYmZccXSvvXmvpKTn8IbxXA7QW+uCBsA/WQqnSy4VDKnp80yhXYzSCcXvw4q+A5oXWuoCoKDedQMoNz75s2byJ8WE0Y/Kb5v0XKClm4qlWcW1MUXPnnUE6BC0uIKYK5iuCcCvuPYrvVqOqfj7e+Dyac3iDcViXDH3p+KtnTXMQeDRM57/NQsv3oXwBFdtAYrtYqpcLX94QJOakaSmJd+dsj5KfzMeK55E7YJHrQCeYKXPTYtUyz++X7MwLVn4W3JjXNoA6FiUnZEw4TpcDLvwuwYgEQyp6e9q+Uf3at/8/JQkOSHp2Ba6+hciYSMW5aANQHFATX9Xyz/zpmJ+Uvqa+N5qBw6FBzB/aBYAxdMlNVMZ4Pg+zezVwLzR+d7wM7DqH1iVNroZCuBxfPOm+gbgXLfmXLf5VQx1KT5/T/HNh4rxi6XKG8V/kbz+SMjqO8xamfcBBCNhAcyxaF4PiqeL6XFfUyXD5bo+KunZbfUudNkewGEwLMCK8enVjSeuSSZ/kIx8qjgV07y0PbRxCjtw9nb/qP/YGsBcZWwC49R8rXLbX2x5dbzgbZarxcONNu7Vc8Xuv6E65Bpt3nXItkXZZg1QdjuhGwigXcGzkXrCfOS7gvO1fG7WoaR5pivYVZf5ZjSjGc2I/NdxCxYXR2hUdbejAAAAAElFTkSuQmCC"
+          alt="bootstrap"><strong>Bootstrap</strong>
+        <div class="bar" data-level="86"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="container" id="projects">
+    <h2 class="section-title reveal">Featured Projects</h2>
+    <p class="section-sub reveal">A mix of UI animations, landing pages and tools</p>
+    <div class="grid">
+      <article class="card reveal">
+        <div class="thumb">
+          <img src="./images/project1.png" alt="Futuristic Neon Login Preview">
+        </div>
+        <div class="content">
+          <span class="tag">Education</span>
+          <span class="tag">Learning Platform</span>
+          <h3>Online Education & Learning Platform</h3>
+          <p>A modern and clean education platform offering courses, student portals and academic resources with a fully
+            responsive, user-friendly layout.</p>
+
+          <a class="btn-primary" href="https://szacademy.pk/">View Project</a>
+        </div>
+      </article>
+      <article class="card reveal" style="transition-delay:.04s">
+        <div class="thumb">
+          <img src="./images/project2.png" alt="Festive Signup Flow Preview">
+        </div>
+        <div class="content">
+          <span class="tag">Services</span>
+          <span class="tag">Cleaning Website</span>
+          <h3>Cleaning & Maintenance Service</h3>
+          <p>A service-focused website offering professional cleaning, waste management and maintenance solutions.</p>
+          <a class="btn-primary" href="https://www.safaiwala.pk/">View Project</a>
+        </div>
+      </article>
+      <article class="card reveal" style="transition-delay:.08s">
+        <div class="thumb">
+          <img src="./images/project3.png" alt="Animated Portfolio Preview">
+        </div>
+        <div class="content">
+          <span class="tag">Brand Website</span>
+          <span class="tag">Products Showcase</span>
+          <h3>Premium Coffee Brand Website</h3>
+          <p>A professional multi-page coffee brand website showcasing products, brand story, pricing, and contact
+            sections with smooth animations, rich visuals, and a high-quality user experience.</p>
+          <a class="btn-primary" href="https://lucky-dasik-91a821.netlify.app">View Project</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="container" id="services">
+    <h2 class="section-title reveal">Services</h2>
+    <p class="section-sub reveal">Simple packages for any stage</p>
+    <div class="grid" id="grid-2">
+      <div class="service reveal">
+        <h3>Starter Landing</h3>
+        <p>One-page responsive website with clean UI, smooth interactions, and a functional contact form.</p>
+        <p><strong>Timeline:</strong> ~3–5 days</p>
+      </div>
+      <div class="service reveal" style="transition-delay:.04s">
+        <h3>Portfolio / Business Website</h3>
+        <p>Multi-page responsive website with structured layout, visually appealing design, and optimized user
+          experience.</p>
+        <p><strong>Timeline:</strong> ~1–2 weeks</p>
+      </div>
+      <div class="service reveal" style="transition-delay:.08s">
+        <h3>E-commerce Website</h3>
+        <p>Responsive online store with product catalog, shopping cart, and checkout flow. Clean UI design for seamless
+          user experience.</p>
+        <p><strong>Timeline:</strong> ~2–3 weeks</p>
+      </div>
+    </div>
+
+  </section>
+
+  <a href="https://api.whatsapp.com/send?phone=03142209297" class="whatsapp-button " aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Contact -->
+  <section class="container" id="contact">
+    <h2 class="section-title reveal">Get in touch</h2>
+    <p class="section-sub reveal">Have a project in mind? Let's build something beautiful.</p>
+
+    <form class="reveal" id="contactForm">
+      <input type="text" name="name" placeholder="Your name" required>
+      <input type="email" name="email" placeholder="Email address" required>
+      <textarea name="message" placeholder="Tell me about your project…" required></textarea>
+      <button class="btn-primary" type="submit">Send Message</button>
+    </form>
+
+    <p id="statusMsg"></p>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div style="display:flex; align-items:center; justify-content:center; gap:16px; flex-wrap:wrap">
+        <p>© <span id="year"></span> Talha Malik. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Navbar mobile toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const navlinks = document.getElementById('navlinks');
+    menuBtn.addEventListener('click', () => navlinks.classList.toggle('open'));
+
+    // Theme toggle (persist)
+    const themeToggle = document.getElementById('themeToggle');
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') document.documentElement.classList.add('light');
+    themeToggle.addEventListener('click', () => {
+      document.documentElement.classList.toggle('light');
+      localStorage.setItem('theme', document.documentElement.classList.contains('light') ? 'light' : 'dark');
+    });
+
+    // Year set
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Reveal on scroll using IntersectionObserver
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('revealed');
+          // Animate skill bars when section visible
+          if (e.target.classList.contains('skill')) {
+            const bar = e.target.querySelector('.bar');
+            const level = bar.getAttribute('data-level');
+            bar.style.transition = 'transform .9s cubic-bezier(.2,.8,.2,1)';
+            bar.style.transform = `scaleX(${level / 100})`;
+          }
+          io.unobserve(e.target);
+        }
+      })
+    }, { threshold: .18 });
+
+    document.querySelectorAll('.reveal, .skill').forEach(el => io.observe(el));
+
+    // Contact form (demo only)
+    <!-- EmailJS CDN -->
+
+
+    // Initialize EmailJS (replace with your public key)
+    emailjs.init("iouqgmxN6jD_w1Ufh");
+
+    const form = document.getElementById("contactForm");
+    const statusMsg = document.getElementById("statusMsg");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      statusMsg.textContent = "Sending...";
+
+      const serviceID = "service_mhp447u";
+      const templateID = "template_auj38vg";
+
+      // Collect form values
+      const params = {
+        name: form.name.value,
+        email: form.email.value,
+        message: form.message.value
+      };
+
+      // Send email
+      emailjs.send(serviceID, templateID, params)
+        .then(() => {
+          statusMsg.style.color = "green";
+          statusMsg.textContent = "Thanks your Message successfully sent!";
+          form.reset();
+        })
+        .catch((err) => {
+          console.error(err);
+          statusMsg.style.color = "red";
+          statusMsg.textContent = "Failed to send message. Try again!";
+        });
+    });
+
+
+    // Hover interaction for skill bars
+    document.querySelectorAll('.skill').forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        card.style.transform = 'translateY(-6px)';
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+      });
+    });
+  </script>
+</body>
+
+</html>
